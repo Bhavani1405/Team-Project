@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexusBoard - Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <h1>NexusBoard</h1>
+    <div class="header-actions">
+        <span id="welcomeUser"></span>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <button id="logoutBtn">Logout</button>
+        <a href="{{ url_for('board') }}">Board View</a>
+    </div>
+</header>
+
+<section class="dashboard-section">
+    <h2>Create New Task</h2>
+    <form id="taskForm">
+        <input type="text" placeholder="Task Title" id="taskTitle" required>
+        <textarea placeholder="Task Description" id="taskDesc"></textarea>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div class="task-board" id="taskBoard"></div>
+</section>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/dragdrop.js') }}"></script>
+</body>
+</html>

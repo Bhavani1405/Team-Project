@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Board View</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="page-board">
+
+<h1 style="text-align:center; margin-top:20px;">Board View</h1>
+
+<div class="board-container" id="boardContainer"></div>
+
+<script>
+// Load tasks from dashboard
+const boardContainer = document.getElementById('boardContainer');
+let tasks = JSON.parse(localStorage.getItem('dashboardTasks') || '[]');
+
+function renderBoard() {
+    boardContainer.innerHTML = '';
+    tasks.forEach((task, index) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<h3>${task.title}</h3><p>${task.desc}</p>`;
+        // Delete task
+        card.onclick = () => {
+            if(confirm('Delete this task?')) {
+                tasks.splice(index,1);
+                saveBoard();
+                renderBoard();
+            }
+        };
+        boardContainer.appendChild(card);
+    });
+}
+
+function saveBoard() {
+    localStorage.setItem('dashboardTasks', JSON.stringify(tasks));
+}
+
+// Initial render
+renderBoard();
+</script>
+
+</body>
+</html>

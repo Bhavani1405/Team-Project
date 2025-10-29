@@ -1,0 +1,216 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFD700;
+}
+.header-actions a, .header-actions button, .header-actions span {
+    margin-left: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.header-actions button {
+    border: 1px solid #FFD700;
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+.header-actions button:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* Auth Pages: Login/Register */
+.auth-container {
+    max-width: 420px;
+    margin: 80px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+.auth-container h2 {
+    color: #FF4500;
+    margin-bottom: 25px;
+}
+.auth-container form input,
+.auth-container form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.auth-container form input:focus,
+.auth-container form textarea:focus {
+    outline: none;
+    border-color: #FF4500;
+    box-shadow: 0 0 10px rgba(255,69,0,0.4);
+}
+.auth-container form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #FF4500;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.auth-container form button:hover {
+    background: #FF6347;
+}
+.auth-container form p a {
+    color: #FF4500;
+    font-weight: bold;
+}
+
+/* Dashboard Section */
+.dashboard-section, .profile-section, .board-section {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: rgba(255,255,255,0.9);
+    border-radius: 18px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* Task Form */
+#taskForm input, #taskForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+#taskForm input:focus, #taskForm textarea:focus {
+    outline: none;
+    border-color: #FF4500;
+    box-shadow: 0 0 12px rgba(255,69,0,0.4);
+}
+#taskForm button {
+    padding: 12px 24px;
+    background: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+#taskForm button:hover {
+    background: #FF6347;
+}
+
+/* Task Board */
+.task-board {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.task-card {
+    background: #fff;
+    width: 260px;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    cursor: grab;
+    transition: all 0.3s ease;
+}
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+.task-card strong {
+    color: #FF4500;
+    font-size: 16px;
+}
+
+
+/* Profile Form */
+#profileForm input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+#profileForm input:focus {
+    border-color: #FF4500;
+    box-shadow: 0 0 12px rgba(255,69,0,0.4);
+}
+#profileForm button {
+    padding: 12px 24px;
+    background: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+#profileForm button:hover {
+    background: #FF6347;
+}
+
+/* Buttons (General Modern Style) */
+button, .btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+button.primary, .btn.primary {
+    background: #FF4500;
+    color: #fff;
+}
+button.primary:hover, .btn.primary:hover {
+    background: #FF6347;
+}
+button.secondary, .btn.secondary {
+    background: #FFD700;
+    color: #000;
+}
+button.secondary:hover, .btn.secondary:hover {
+    background: #FFC107;
+}
